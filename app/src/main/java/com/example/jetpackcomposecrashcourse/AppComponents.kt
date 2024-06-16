@@ -76,8 +76,8 @@ fun TextComponent(
     ) {
     Text(
         modifier = Modifier
-            //.fillMaxWidth()
-            .wrapContentHeight()
+            .fillMaxWidth()
+            //.wrapContentHeight()
             .wrapContentWidth()
             .background(
                 color = Color.LightGray,
