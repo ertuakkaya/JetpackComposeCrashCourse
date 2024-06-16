@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
+import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -66,8 +67,8 @@ fun HelloWorldPreviewInMobileScreen(nameParameter: String = "Rana") {
 @Composable
 fun TextComponent(
     value: String,
-    size: TextUnit,
-    colorValue: Color,
+    size: TextUnit = 18.sp,
+    colorValue: Color = Color.Magenta,
     fontWeightValue: FontWeight = FontWeight.Normal,
     fontStyleValue: FontStyle = FontStyle.Normal,
     maxLineValue: Int? = null,
@@ -75,8 +76,9 @@ fun TextComponent(
     ) {
     Text(
         modifier = Modifier
-            .fillMaxWidth()
+            //.fillMaxWidth()
             .wrapContentHeight()
+            .wrapContentWidth()
             .background(
                 color = Color.LightGray,
                 shape = RoundedCornerShape(18.dp),
