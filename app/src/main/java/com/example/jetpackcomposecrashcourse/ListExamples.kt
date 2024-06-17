@@ -1,4 +1,4 @@
-package com.example.jetpackcomposecrashcourse.ui.theme
+package com.example.jetpackcomposecrashcourse
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
@@ -12,8 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.jetpackcomposecrashcourse.NormalText
-import com.example.jetpackcomposecrashcourse.TextComponent
 
 // LazyRow , LazyColumn , LazyVerticalGrid , LazyHorizontalGrid
 
