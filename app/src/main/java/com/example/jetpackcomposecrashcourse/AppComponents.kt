@@ -1,14 +1,20 @@
 package com.example.jetpackcomposecrashcourse
 
 import android.content.res.Configuration
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -55,10 +61,10 @@ fun HelloWorldPreviewForComponent(nameParameter: String = "Rana") {
     HelloWorld(name = nameParameter)
 }
 
-@Preview(showBackground = true,device = Devices.PIXEL_4_XL,
-    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL,
-    showSystemUi = true
-)
+//@Preview(showBackground = true,device = Devices.PIXEL_4_XL,
+//    uiMode = Configuration.UI_MODE_NIGHT_NO or Configuration.UI_MODE_TYPE_NORMAL,
+//    showSystemUi = true
+//)
 @Composable
 fun HelloWorldPreviewInMobileScreen(nameParameter: String = "Rana") {
     HelloWorld(name = nameParameter)
@@ -78,20 +84,21 @@ fun TextComponent(
         modifier = Modifier
             .fillMaxWidth()
             //.wrapContentHeight()
-            .wrapContentWidth()
-            .background(
-                color = Color.LightGray,
-                shape = RoundedCornerShape(18.dp),
-            )
-            .border(
-                width = 2.dp,
-                color = Color.Cyan,
-                shape = RoundedCornerShape(18.dp),
-
-                )
+            //.wrapContentWidth()
+//            .background(
+//                color = Color.LightGray,
+//                shape = RoundedCornerShape(18.dp),
+//            )
+//            .border(
+//                width = 2.dp,
+//                color = Color.Cyan,
+//                shape = RoundedCornerShape(18.dp),
+//
+//                )
             .padding(
                 18.dp,
             )
+
         ,
         text = value,
         fontSize = size,
@@ -111,5 +118,50 @@ fun TextComponentPreview() {
         value = "Hello World!",
         size = 36.sp,
         colorValue = Color.Magenta,
+    )
+}
+
+
+@Composable
+fun SimpleButton(){
+
+    Button(
+        modifier = Modifier
+            .padding(start = 18.dp, end = 18.dp, top = 18.dp, bottom = 18.dp)
+            .height(68.dp)
+            .fillMaxWidth(),
+
+        shape = RoundedCornerShape(18.dp),
+        
+        onClick = {
+            Log.d("Button","Clicked")
+
+        })
+    {
+        NormalTextForButtons(value = "Click Me")
+    }
+
+}
+
+@Preview
+@Composable
+fun SimpleButtonPreview(){
+    SimpleButton()
+}
+
+@Composable
+fun NormalTextForButtons(value: String){
+    Text(
+        modifier = Modifier
+            //.fillMaxSize()
+//            .height(68.dp)
+//            .width(200.dp)
+            //.padding(top = 8.dp)
+
+        ,
+        text = value,
+        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+
+
     )
 }
