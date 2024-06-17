@@ -4,8 +4,10 @@ import android.media.Image
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -254,51 +256,124 @@ fun ImageComponent(){
 
     //var imageList = List<Image>(3,Image::class.java)
 
-    Row (
+    Column (
         modifier = Modifier
             .fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceEvenly,
-        verticalAlignment = Alignment.CenterVertically
+        verticalArrangement = Arrangement.SpaceEvenly,
+        horizontalAlignment = Alignment.CenterHorizontally,
     ){
-        Image(
+        Row (
             modifier = Modifier
-                //.padding(start = 18.dp, end = 18.dp)
-                .size(85.dp)
-                .background(Color.Gray, CircleShape)
-                .clip(CircleShape),
-            painter = painterResource(R.drawable.coffe),
-            contentDescription = "",
-            alignment = Alignment.Center,
-            contentScale = ContentScale.Crop,
-            //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
-        )
-        Image(
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Image(
+                modifier = Modifier
+                    //.padding(start = 18.dp, end = 18.dp)
+                    .size(85.dp)
+                    .background(Color.Gray, CircleShape)
+                    .clip(CircleShape),
+                painter = painterResource(R.drawable.coffe),
+                contentDescription = "",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.Crop,
+                //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
+            )
+            Image(
+                modifier = Modifier
+                    //.padding(start = 18.dp, end = 18.dp)
+                    .size(85.dp)
+                    .background(Color.Gray, CircleShape)
+                    .clip(CircleShape),
+                painter = painterResource(R.drawable.coffe),
+                contentDescription = "",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.Crop,
+                //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
+            )
+            Image(
+                modifier = Modifier
+                    //.padding(start = 18.dp)
+                    .size(85.dp)
+                    .background(Color.Gray, CircleShape)
+                    .clickable { }
+                    .clip(CircleShape),
+                painter = painterResource(R.drawable.coffe),
+                contentDescription = "",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.Crop,
+
+                //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
+            )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row (
             modifier = Modifier
-                //.padding(start = 18.dp, end = 18.dp)
-                .size(85.dp)
-                .background(Color.Gray, CircleShape)
-                .clip(CircleShape),
-            painter = painterResource(R.drawable.coffe),
-            contentDescription = "",
-            alignment = Alignment.Center,
-            contentScale = ContentScale.Crop,
-            //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
-        )
-        Image(
-            modifier = Modifier
-                //.padding(start = 18.dp)
-                .size(85.dp)
-                .background(Color.Gray, CircleShape)
-                .clip(CircleShape),
-            painter = painterResource(R.drawable.coffe),
-            contentDescription = "",
-            alignment = Alignment.Center,
-            contentScale = ContentScale.Crop,
-            //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
-        )
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            Image(
+                modifier = Modifier
+                    //.padding(start = 18.dp, end = 18.dp)
+                    .size(85.dp)
+                    .background(Color.Gray, CircleShape)
+                    .clip(CircleShape),
+                painter = painterResource(R.drawable.coffe),
+                contentDescription = "",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.Crop,
+                //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
+            )
+            Image(
+                modifier = Modifier
+                    //.padding(start = 18.dp, end = 18.dp)
+                    .size(85.dp)
+                    .background(Color.Gray, CircleShape)
+                    .clip(CircleShape),
+                painter = painterResource(R.drawable.coffe),
+                contentDescription = "",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.Crop,
+                //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
+            )
+            Image(
+                modifier = Modifier
+                    //.padding(start = 18.dp)
+                    .size(85.dp)
+                    .background(Color.Gray, CircleShape)
+                    .clickable { }
+                    .clip(CircleShape),
+                painter = painterResource(R.drawable.coffe),
+                contentDescription = "",
+                alignment = Alignment.Center,
+                contentScale = ContentScale.Crop,
+
+                //colorFilter = androidx.compose.ui.graphics.ColorFilter.tint(Color.Gray),
+            )
+        }
+
     }
 
+
+
     Spacer(modifier = Modifier.height(16.dp))
+
+//    Button(
+//        onClick = { /*TODO*/ },
+//        modifier = Modifier
+//            .size(100.dp)
+//            .clip(CircleShape)
+//            .background()
+//            ,
+//
+//    ) {
+
+
+
 
 
 
