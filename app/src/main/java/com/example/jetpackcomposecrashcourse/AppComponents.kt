@@ -387,3 +387,22 @@ fun ImageComponentPreview(){
 }
 
 
+@Composable
+fun MixList(){
+    Column (
+        modifier = Modifier
+            .background(Color.LightGray)
+        ,
+
+
+    ){
+        HorizontalListExamples()
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        ListExamples()
+    }
+}
+
+
+
