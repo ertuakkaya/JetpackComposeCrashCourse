@@ -39,6 +39,8 @@ fun VerticalScreen() {
         Spacer(modifier =Modifier.height(16.dp))
 
         SimpleButton()
+
+        ImageComponent()
     }
 
 }
